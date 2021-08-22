@@ -33,7 +33,6 @@ public class DashingObject : MonoBehaviour
         } else
         {
             m_rb2d.velocity = Vector3.zero;
-            spriteObject.transform.localScale = Vector3.one;
         }
     }
 
@@ -49,9 +48,7 @@ public class DashingObject : MonoBehaviour
     public void Dash (Vector2 direction)
     {
         m_dashing = true;
-        m_direction = direction;
-        StretchSprite(direction, 2f);
-        
+        m_direction = direction;        
     }
 
     public bool CanDash ()
